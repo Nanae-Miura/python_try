@@ -9,8 +9,8 @@ from pytz import timezone
 
 
 #各種定義
-BASE_URL ="https://api.bitflyer.jp"
-url = BASE_URL + "POST /v1/me/sendchildorder"
+BASE_URL =""
+url = BASE_URL + ""
 
 API_KEY = "8kfwQnG5Zv6oqcfnfCRsV"
 API_SECRET ="qDrCkn7w1l9JI8uWSQNDsLBVIzPBaVssrjxIYwOp+Ew="
