@@ -9,11 +9,11 @@ from pytz import timezone
 
 
 #各種定義
-BASE_URL =""
-url = BASE_URL + ""
+BASE_URL ="https://api.bitflyer.jp"
+url = BASE_URL + "POST /v1/me/sendchildorder"
 
-API_KEY = "8kfwQnG5Zv6oqcfnfCRsV"
-API_SECRET ="qDrCkn7w1l9JI8uWSQNDsLBVIzPBaVssrjxIYwOp+Ew="
+API_KEY = ""
+API_SECRET =""
 api = pybitflyer.API(API_KEY,API_SECRET)
 
 BALANCE_KEYS =["currency_code",
