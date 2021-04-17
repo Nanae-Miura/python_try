@@ -7,12 +7,11 @@ from datetime import datetime
 from pytz import timezone
 import requests,time
 
-
 #外部ファイルの読み込み
 #from ファイル名、import 関数名
 from app.chart import chart1
 from app.order import receive_market
-# from app.get_price import get_price
+
 
 
 # flaskオブジェクトの生成
@@ -72,7 +71,23 @@ def back_to_top():
         <p><a href="/login">Login</a></p>
         """
     #竹内追加終了
-    return render_template("index.html")
+
+    #価格表示機能追記
+    #本当は価格表示も関数かした方が綺麗だけど、上手く行かなかったからとりあえずそのまま
+    url = "https://api.bitflyer.jp/v1/ticker"
+    cc = requests.get(url).json()
+    cc_last ='{:,}'.format(int(cc['ltp']))
+    btc_price = ("Bitflyer＝",cc_last,"円です")
+    
+
+    now = str(datetime.now())
+    get_time =("取得時刻" + now)
+
+    url = 'https://coincheck.com/api/ticker'
+    cc = requests.get(url).json()
+    cc_last = '{:,}'.format(int(cc['last']))
+    coincheck_price = ("Coincheck =", cc_last, "円です")
+    return render_template("index.html", btc_price=btc_price,now=now, coincheck_price=coincheck_price)
     
   
 
@@ -88,9 +103,21 @@ def back_to_top():
 @app.route("/order",methods=['POST'])
 def order_btc():
     receive_market()
-    return render_template("index.html")
 
+    url = "https://api.bitflyer.jp/v1/ticker"
+    cc = requests.get(url).json()
+    cc_last ='{:,}'.format(int(cc['ltp']))
+    btc_price = ("Bitflyer＝",cc_last,"円です")
+    
 
+    now = str(datetime.now())
+    get_time =("取得時刻" + now)
+
+    url = 'https://coincheck.com/api/ticker'
+    cc = requests.get(url).json()
+    cc_last = '{:,}'.format(int(cc['last']))
+    coincheck_price = ("Coincheck =", cc_last, "円です")
+    return render_template("index.html",btc_price=btc_price,now=now, coincheck_price=coincheck_price)
 
 
 # ここから下は竹内追加の簡易ログイン・ログアウト機能

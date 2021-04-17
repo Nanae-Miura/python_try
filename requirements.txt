@@ -44,7 +44,7 @@ click @ file:///home/linux1/recipes/ci/click_1610990599742/work
 cloudpickle @ file:///tmp/build/80754af9/cloudpickle_1598884132938/work
 clyent==1.2.2
 colorama @ file:///tmp/build/80754af9/colorama_1607707115595/work
-conda==4.9.2
+conda==4.10.1
 conda-build==3.21.4
 conda-package-handling @ file:///opt/concourse/worker/volumes/live/a7e34989-4c54-4cb6-4156-4e58ee270730/volume/conda-package-handling_1603018121300/work
 conda-verify==3.4.2
@@ -62,6 +62,7 @@ dask @ file:///tmp/build/80754af9/dask-core_1615055117017/work
 decorator @ file:///home/ktietz/src/ci/decorator_1611930055503/work
 defusedxml @ file:///tmp/build/80754af9/defusedxml_1615228127516/work
 diff-match-patch @ file:///tmp/build/80754af9/diff-match-patch_1594828741838/work
+distlib @ file:///opt/concourse/worker/volumes/live/2b7d7903-f212-4bce-48db-f963c4d1c6e9/volume/distlib_1600715936463/work
 distributed @ file:///opt/concourse/worker/volumes/live/db7ba06e-9d2e-4ef3-7a92-b39edd652ea2/volume/distributed_1615055265013/work
 Django==3.1.7
 docutils==0.16
@@ -130,7 +131,7 @@ mkl-service==2.3.0
 mock @ file:///tmp/build/80754af9/mock_1607622725907/work
 MonthDelta==0.9.1
 more-itertools @ file:///tmp/build/80754af9/more-itertools_1613676688952/work
-mplfinance==0.12.7a10
+mplfinance==0.12.7a12
 mpmath==1.2.1
 msgpack @ file:///opt/concourse/worker/volumes/live/d7400f3a-e5de-4e85-5d4c-0c984c648401/volume/msgpack-python_1612287157185/work
 multidict==5.1.0
@@ -263,6 +264,7 @@ typing-extensions @ file:///home/ktietz/src/ci_mi/typing_extensions_161280820962
 ujson @ file:///opt/concourse/worker/volumes/live/b4182deb-c6ce-4bc8-7783-61027c162049/volume/ujson_1611259506235/work
 unicodecsv==0.14.1
 urllib3 @ file:///tmp/build/80754af9/urllib3_1615837158687/work
+virtualenv @ file:///opt/concourse/worker/volumes/live/afcc9f34-10d0-40a7-7078-ecdba0862037/volume/virtualenv_1615923597589/work
 watchdog @ file:///opt/concourse/worker/volumes/live/ba071b65-d6ec-4539-5875-0791be503584/volume/watchdog_1612471127391/work
 wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
 webencodings==0.5.1

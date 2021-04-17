@@ -11,10 +11,12 @@ import time
 from datetime import datetime
 import datetime as dt
 import pandas as pd
+import pandas_datareader.data as dr
 import matplotlib
 matplotlib.use('Agg')
 from matplotlib import pyplot as plt
 import matplotlib.dates as mdates
+import mplfinance.original_flavor as mpf
 from mplfinance.original_flavor import candlestick_ohlc
 
 
@@ -77,6 +79,6 @@ def chart1():
                      colorup='g', colordown='r')
     # チャートタイトルのテキスト
     plt.title('BTC / JPY  by Cryptowatch API')
-    # plt.savefig('app/static/price.png')
+    plt.savefig('app/static/price.png')
 
 

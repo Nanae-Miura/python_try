@@ -95,6 +95,16 @@ h2 {
   margin-right: auto;
   max-width: 500px;
 }
+.get_balance{
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+}
+.submit{
+  text-align: center;
+  margin-top: 0;
+}
   </style>
   </head>
   <body>
@@ -123,15 +133,21 @@ h2 {
     
   <h4 style="text-align: center;">送信ボタンを押すと0.1XRPの成行注文が出せます</h4>
 
-  <form action="/order" method="POST">
+<form action="/order" method="POST">
     <div class="buy">
       成行買い注文:<input type="radio" name=order_type value=buy_market>
     </div>
     <div class="sell">
       成行売り注文:<input type="radio" name=order_type value=sell_market>
-      <input type="submit" value="送信">
     </div>
-  </form>
+    <div class="get_balance">
+      口座の残高を取得:<input type="radio" name=order_type value=get_balance>
+    </div>
+  <div class="submit">
+    <input type="submit" value="送信">
+  </div>
+</form>
+
 
 
 
